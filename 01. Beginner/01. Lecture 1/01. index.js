@@ -22,3 +22,20 @@ console.log(typeof age,     age);     // "number" (after reassignment)
 console.log(typeof student, student); // "boolean"
 console.log(typeof address, address); // "object"
 console.log(typeof job,     job);     // "undefined"
+
+
+
+
+// Const Example
+const profile = {
+    firstName: "Mohammad",
+    lastName: "Zahin",
+    username: "@MohammadZahin",
+    isFollow: true,
+    followers: 500,
+    following: 200,
+  };
+  
+  profile.followers = 550; // Modifying the 'followers' property
+  console.log(profile); // Output: { ... (updated followers count) }
+    
