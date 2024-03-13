@@ -129,3 +129,19 @@ console.log("Arithmetic Operators");
     let studentGrade = calculateGrade(studentMarks);
     console.log(`Student marks: ${studentMarks}, Grade: ${studentGrade}`);
     
+    // Switch Statement
+    let grade = 85;
+
+    switch (grade) {
+    case 90:
+        console.log("Excellent!");
+        break;
+    case 80:
+        console.log("Good job!");
+        break;
+    case 70:
+        console.log("You passed!");
+        break;
+    default:
+        console.log("Study harder next time.");
+    }
