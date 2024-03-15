@@ -75,4 +75,23 @@ for (const data in person) {
 
 
 
+// Practice Question1
+// Print Even Number
+console.log("Print Even Number");
 
+let number = 0;
+while (number <= 10) {
+  if (number % 2 === 0) {
+    console.log(number);
+  }
+  number++;
+}
+
+// Old Number
+console.log("Old Number");
+
+for (let i = 0; i <= 10; i++) {
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
+}
