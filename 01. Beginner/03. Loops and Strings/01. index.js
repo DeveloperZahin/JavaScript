@@ -59,5 +59,20 @@ for (let i = 0; i < fruits.length; i++) {
 
 
 
+// For in Loop
+console.log("For in Loop");
+
+const person = {
+  name: "Zahin",
+  age: 21,
+  job: "Software Engineer"
+};
+
+for (const data in person) {
+  console.log("Data=", data, "  Value=", person[data]);
+}
+
+
+
 
 
