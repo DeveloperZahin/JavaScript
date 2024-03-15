@@ -29,3 +29,23 @@ do {
   num++; // Increment num
 } while (num <= 3);
 
+
+
+
+// For of Loop
+console.log("For of Loop");
+
+let str = "JavaScript";
+let charCount = 0; // Declare and initialize size variable
+
+for (let char of str) {
+  console.log("Character: ", char); // Use string interpolation
+  charCount++;
+}
+console.log("String Size =", charCount);
+
+
+
+
+
+
