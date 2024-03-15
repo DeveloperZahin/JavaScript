@@ -47,5 +47,17 @@ console.log("String Size =", charCount);
 
 
 
+// For Each Loop
+
+console.log("For Each Loop");
+
+const fruits = ["apple", "banana", "orange"];
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+
+
+
+
 
 
