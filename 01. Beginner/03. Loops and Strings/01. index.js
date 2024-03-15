@@ -95,3 +95,34 @@ for (let i = 0; i <= 10; i++) {
     console.log(i);
   }
 }
+
+
+// Guess the numbers game
+console.log("Guess Number Game!");
+
+// Generate a random number between 1 and 100 (inclusive)
+const randomNumber = Math.floor(Math.random() * 100) + 1;
+
+// Set maximum number of guesses
+const maxGuesses = 10;
+
+// Loop for guessing attempts
+for (let guessCount = 1; guessCount <= maxGuesses; guessCount++) {
+  // Get user's guess and convert to a number
+  const guess = parseInt(prompt(`Guess #${guessCount} (1-100): `));
+
+  // Check guess and provide feedback
+  if (guess === randomNumber) {
+    console.log(`You win! The number was ${randomNumber}`);
+    break; // Exit loop on correct guess
+  } else if (guess < randomNumber) {
+    console.log("Guess is low. Try again.");
+  } else {
+    console.log("Guess is high. Try again.");
+  }
+
+  // Announce used guesses if the loop ends due to exceeding the limit
+  if (guessCount === maxGuesses) {
+    console.log(`Out of guesses! The number was ${randomNumber}`);
+  }
+}
