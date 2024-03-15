@@ -16,3 +16,16 @@ while (count <= 3) {
   console.log("Count: ", count);
   count++; // Increment count
 }
+
+
+
+
+// Do While Loop
+console.log("Do While Loop");
+
+let num = 4;
+do {
+  console.log("Number: ", num);
+  num++; // Increment num
+} while (num <= 3);
+
