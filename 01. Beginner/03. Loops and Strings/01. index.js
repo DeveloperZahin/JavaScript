@@ -97,7 +97,7 @@ for (let i = 0; i <= 10; i++) {
 }
 
 
-// Guess the numbers game
+/*// Guess the numbers game
 console.log("Guess Number Game!");
 
 // Generate a random number between 1 and 100 (inclusive)
@@ -125,4 +125,18 @@ for (let guessCount = 1; guessCount <= maxGuesses; guessCount++) {
   if (guessCount === maxGuesses) {
     console.log(`Out of guesses! The number was ${randomNumber}`);
   }
-}
+} */
+
+
+
+
+// String 
+
+console.log("--------------------String------------------");
+
+let name = "Mohammad Zahin";
+
+console.log(name);
+console.log(name.length);
+
+console.log(name[9]);
