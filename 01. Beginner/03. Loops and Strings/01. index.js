@@ -140,3 +140,9 @@ console.log(name);
 console.log(name.length);
 
 console.log(name[9]);
+
+
+// Template Literals 
+const greeting = `Hello, ${name}!`;
+console.log(greeting); // Output: Hello, Mohammad Zahin!
+
