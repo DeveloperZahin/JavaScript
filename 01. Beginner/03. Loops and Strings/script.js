@@ -173,11 +173,11 @@ const lastName = "Doe";
 
 console.log(firstName.concat(" ", lastName));   // Output: John Doe
 
-// 5. indexOf() and lastIndexOf() - These methods search for a substring within a string and return the index of the first or last occurrence, respectively. They return -1 if the substring is not found.
-const searchString = "apple is a fruit, but banana is not";
+// // 5. indexOf() and lastIndexOf() - These methods search for a substring within a string and return the index of the first or last occurrence, respectively. They return -1 if the substring is not found.
+// const searchString = "apple is a fruit, but banana is not";
 
-console.log(searchString.indexOf("apple"));     // Output: 0
-console.log(searchString.lastIndexOf("apple")); // Output: 6
+// console.log(searchString.indexOf("apple"));     // Output: 0
+// console.log(searchString.lastIndexOf("apple")); // Output: 6 //Error
 
 // 6. replace() - The replace() method allows you to replace a part of a string with another string.
 const slogan = "JS: Making web development fun";
