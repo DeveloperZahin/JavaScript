@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Time and Date</title>
+</head>
+<body>
+    <p style="font-size: 10vh; text-align: center; color: #1bd18e; margin-top: 39vh;">JavaScript</p>
+    <p style="font-size: 2vh; text-align: center; color: #1bd18e; margin-top: -11vh;">Time and Date</p>
+
+    <div id="timeInfo" style="font-size: 18px; text-align: center; margin-top: 20px;"></div>
+
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var timeInfoElement = document.getElementById("timeInfo");
+            timeInfoElement.innerHTML = "Today's Date: " + now.toDateString() + "<br>";
+            timeInfoElement.innerHTML += "Current Time: " + now.toLocaleTimeString() + "<br>";
+            timeInfoElement.innerHTML += "Year: " + now.getFullYear() + "<br>";
+            timeInfoElement.innerHTML += "Month: " + (now.getMonth() + 1) + "<br>";
+            timeInfoElement.innerHTML += "Day: " + now.getDate() + "<br>";
+            timeInfoElement.innerHTML += "Hour: " + now.getHours() + "<br>";
+            timeInfoElement.innerHTML += "Minute: " + now.getMinutes() + "<br>";
+            timeInfoElement.innerHTML += "Second: " + now.getSeconds() + "<br>";
+            timeInfoElement.innerHTML += "Day of Week: " + now.getDay() + "<br>";
+        }
+
+        // Call updateTime function initially to display current time and date
+        updateTime();
+
+        // Update time and date every second (1000 milliseconds)
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
