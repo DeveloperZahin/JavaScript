@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events Example</title>
+</head>
+<body>
+    <button id="myButton">Click Me</button>
+    <div id="myDiv" style="width: 100px; height: 100px; background-color: red;"></div>
+    <input type="text" id="myInput">
+    <select id="mySelect">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+    </select>
+    <p id="output">Selected option: </p>
+
+    <script>
+        // Click Event
+        document.getElementById("myButton").addEventListener("click", function() {
+            alert("Button clicked!");
+        });
+
+        // Mouseover and Mouseout Events
+        var div = document.getElementById("myDiv");
+        div.addEventListener("mouseover", function() {
+            div.style.backgroundColor = "blue";
+        });
+        div.addEventListener("mouseout", function() {
+            div.style.backgroundColor = "red";
+        });
+
+        // Keydown Event
+        document.getElementById("myInput").addEventListener("keydown", function(event) {
+            console.log("Key pressed: " + event.key);
+        });
+
+        // Change Event
+        document.getElementById("mySelect").addEventListener("change", function() {
+            var selectedOption = document.getElementById("mySelect").value;
+            document.getElementById("output").textContent = "Selected option: " + selectedOption;
+        });
+
+        // Load Event
+        window.addEventListener("load", function() {
+            alert("Page loaded!");
+        });
+    </script>
+</body>
+</html>
