@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Class Manipulation Example</title>
+    <style>
+        .myClass {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function addClass() {
+            var element = document.getElementById("myElement");
+            element.classList.add("myClass");
+        }
+
+        function removeClass() {
+            var element = document.getElementById("myElement");
+            element.classList.remove("myClass");
+        }
+
+        function toggleClass() {
+            var element = document.getElementById("myElement");
+            element.classList.toggle("myClass");
+        }
+    </script>
+</head>
+<body>
+    <div id="myElement">This is a div</div>
+    <button onclick="addClass()">Add Class</button>
+    <button onclick="removeClass()">Remove Class</button>
+    <button onclick="toggleClass()">Toggle Class</button>
+</body>
+</html>
