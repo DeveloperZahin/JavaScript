@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Example</title>
+    <script>
+        // JavaScript code directly in the HTML page
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent form submission
+            const name = document.getElementById('name').value; // Get value of name input
+            const email = document.getElementById('email').value; // Get value of email input
+
+            // Validate inputs
+            if (name.trim() === '' || email.trim() === '') {
+                alert('Please fill out all fields');
+                return; // Exit function if validation fails
+            }
+
+            // Display input values
+            const output = document.getElementById('output');
+            output.textContent = `Name: ${name}, Email: ${email}`;
+
+            // Additional actions can be performed here, like sending data to a server
+        }
+    </script>
+</head>
+<body>
+    <form id="myForm" onsubmit="handleSubmit(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="output"></div>
+</body>
+</html>
