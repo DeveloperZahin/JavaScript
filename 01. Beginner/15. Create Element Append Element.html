@@ -3,29 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dynamic Image Change</title>
+<title>Dynamic Image Creation</title>
 <style>
   img {
     max-width: 100%;
     height: auto;
+    margin-bottom: 10px;
   }
 </style>
 </head>
 <body>
 
 <div id="imageContainer">
-  <img id="dynamicImage" src="https://via.placeholder.com/200" alt="Dynamic Image">
+  <!-- Existing image -->
+  <img src="https://via.placeholder.com/200" alt="Existing Image">
 </div>
 
-<button onclick="changeImage()">Change Image</button>
+<button onclick="createAndAppendImage()">Create and Append Image</button>
 
 <script>
-function changeImage() {
+function createAndAppendImage() {
   var imageSrc = "https://via.placeholder.com/300"; // New image source
-  var dynamicImage = document.getElementById("dynamicImage");
-  
-  // Change the image source
-  dynamicImage.src = imageSrc;
+
+  // Create a new image element
+  var newImage = document.createElement("img");
+  newImage.src = imageSrc;
+  newImage.alt = "New Image";
+
+  // Append the new image to the image container
+  var imageContainer = document.getElementById("imageContainer");
+  imageContainer.appendChild(newImage);
 }
 </script>
 
