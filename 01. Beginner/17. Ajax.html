@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Introduction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #content {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 3px;
+        }
+    </style>
+    <script>
+      function loadContent() {
+          // Create a new XMLHttpRequest object
+          var xhr = new XMLHttpRequest();
+
+          // Define the function to handle the response
+          xhr.onreadystatechange = function() {
+              if (xhr.readyState == XMLHttpRequest.DONE) {
+                  if (xhr.status == 200) {
+                      // If request is successful, update the content
+                      document.getElementById("content").innerHTML = xhr.responseText;
+                  } else {
+                      // If there is an error, display a message
+                      document.getElementById("content").innerHTML = "Error loading content.";
+                  }
+              }
+          };
+
+          // Open a new GET request to fetch some content from a URL
+          xhr.open("GET", "17.example.txt", true);
+
+          // Send the request
+          xhr.send();
+      }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h1>AJAX Introduction</h1>
+
+    <button onclick="loadContent()">Load Content</button>
+
+    <div id="content">
+        <!-- Content will be loaded here -->
+    </div>
+</div>
+
+</body>
+</html>
+
